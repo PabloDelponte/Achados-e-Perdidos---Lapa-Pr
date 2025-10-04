@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achados e Perdidos Lapa-PR</title>
+    
+    <link rel="icon" type="image/png" href="styles/assets/src/favicon-32x32.png"> 
+    
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+    <header>
+    <h1>Achados e Perdidos</h1> 
+    <h2>LAPA - PR</h2> 
+</header>
+
+    <main>
+        <form id="formItem">
+            <h2>Cadastrar Item</h2>
+            
+            <label for="tipo" class="form-label">Tipo de Cadastro</label>
+            <select id="tipo">
+                <option value="perdido">Perdido</option>
+                <option value="achado">Achado</option>
+            </select>
+            
+            <label for="nome" class="form-label hidden-label">Nome do Item</label>
+            <input type="text" id="nome" placeholder="Nome do item" required>
+            
+            <label for="descricao" class="form-label hidden-label">Descrição</label>
+            <textarea id="descricao" placeholder="Descrição"></textarea>
+            
+            <label for="local" class="form-label hidden-label">Local</label>
+            <input type="text" id="local" placeholder="Local">
+            
+            <label for="data" class="form-label">Data</label>
+            <input type="date" id="data">
+            
+            <label for="imagem">Foto do Item (Máx. 1MB - Opcional):</label>
+            <input type="file" id="imagem" accept="image/*">
+            
+            <label for="contato" class="form-label hidden-label">Seu Contato (Telefone/Email)</label>
+            <input type="text" id="contato" placeholder="Seu contato (telefone ou email)" required>
+            
+            <label for="nomePessoa" class="form-label hidden-label">Seu Nome</label>
+            <input type="text" id="nomePessoa" placeholder="Seu nome" required>
+            
+            <label for="pin" class="form-label">PIN de Segurança (4 dígitos)</label>
+            <input type="password" id="pin" placeholder="Ex: 1234" maxlength="4" required>
+            
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <h2>Itens Ativos (Achados/Perdidos)</h2>
+        <div id="listaItens"></div>
+        
+        <hr style="margin: 30px 0;">
+        <h2>Itens Encontrados e Devolvidos</h2>
+        <div id="listaEncontrados">
+            <p id="mensagemVazioEncontrados" style="text-align: center; color: #777;">Nenhum item marcado como encontrado ainda.</p>
+        </div>
+    </main>
+
+    <script src="styles/script.js" defer></script>
+</body>
+</html>
